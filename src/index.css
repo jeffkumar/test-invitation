@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding: 2rem 5rem; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+    --input-color: white;
+    --input-active-color: rgb(219, 246, 255);
+    --border-color: lightgray;
+    font-size: 14px;
+}
+
+.form-control {
+    display: block;
+    padding: 6px 0 6px 0;
+}
+
+button,
+input[type='radio'] {
+    background-color: var(--input-color);
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: dashed;
+}
+
+input,
+select,
+option {
+    background-color: var(--input-color);
+}
+
+input:focus {
+    background-color: var(--input-active-color);
+}
+
+select:focus {
+    background-color: var(--input-active-color);
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--input-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid var(--border-color);
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--input-active-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid var(--border-color);
+}
+
+button:focus:not(:disabled)    {
+    background-color: var(--input-active-color);
+}
+
+button:hover {
+    background-color: var(--input-active-color);
+}
+
+label {
+    padding: 6px;
+} 
