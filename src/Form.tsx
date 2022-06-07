@@ -75,7 +75,7 @@ export default function Form({ setFormSubmitted }: any) {
                 <textarea id="comments" ref={comments} name="comments" /> 
             </div>
             <div className="form-control">
-                <button onClick={(e) => onSubmit(e)}>Submit RSVP</button>
+                <button onClick={(e) => onSubmit(e)}>Respond</button>
             </div>
         </form>
     </div>
