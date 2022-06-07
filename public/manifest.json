@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "A day in the life",
+  "name": "A day in the life RSVP",
   "icons": [
     {
       "src": "favicon.ico",

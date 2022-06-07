@@ -20,12 +20,34 @@ body {
     --input-color: white;
     --input-active-color: rgb(219, 246, 255);
     --border-color: lightgray;
-    font-size: 16px;
+    font-size: 16px; 
+     
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+        max-width: fit-content;
+    }  
 }
 
 .form-control {
     display: block;
-    padding: 6px 0 6px 0;
+    padding: 10px 0 6px 0;
+}
+
+
+label {
+    padding-right: 6px;
+} 
+
+.radio-label {
+    padding-left: 6px;
+}
+
+textarea { 
+    width: 40vw; 
+    height: 40px;
 }
 
 button,
@@ -75,7 +97,7 @@ input[type='radio']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: var(--input-active-color);
+    background-color: rgb(118, 217, 250);
     content: '';
     display: inline-block;
     visibility: visible;
@@ -89,7 +111,10 @@ button:focus:not(:disabled)    {
 button:hover {
     background-color: var(--input-active-color);
 }
+ 
 
-label {
-    padding: 6px;
+
+.form-error {
+    font-weight: bold;
+    color: red;
 } 
