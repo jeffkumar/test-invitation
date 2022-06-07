@@ -8,7 +8,7 @@ export default function App() {
     const [formSubmitted, setFormSubmitted] = useState(false);  
 
     return (
-        <main>  
+        <main className={formSubmitted ? "thankyou" : null}>  
             {!formSubmitted && <Intro setFormSubmitted={setFormSubmitted}></Intro>}
             {formSubmitted && <ThankYou></ThankYou>}  
         </main>

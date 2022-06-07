@@ -11,10 +11,7 @@ export default function ThankYou() {
             </p>
             <h2>Gifts</h2>
             <p> 
-                You can send a gift <a href="https://www.paypal.me/jeffkumar"> here</a>
-            </p>
-            <p>
-                Or by regular mail: 459 Sutallee Woods Trail White, Ga. 30184
+                You can send a gift by regular mail: 459 Sutallee Woods Trail White, Ga. 30184
             </p> 
         </div>  
     ); 

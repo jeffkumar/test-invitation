@@ -9,6 +9,7 @@ body {
 
 main {
   padding: 1rem 2.5rem; 
+  height: 100vh;
 }
 
 code {
@@ -20,8 +21,13 @@ body {
     --input-color: white;
     --input-active-color: rgb(219, 246, 255);
     --border-color: lightgray;
-    font-size: 16px; 
-     
+    font-size: 16px;  
+}
+
+.thankyou {
+    background-image: url("hands-background.JPG");
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 480px) {
