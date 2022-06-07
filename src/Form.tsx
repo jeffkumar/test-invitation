@@ -45,9 +45,7 @@ export default function Form({ setFormSubmitted }: any) {
 
   return (
     <div>
-        {error !== "" && 
-        <div className="form-error">{error}</div>
-        }
+         
         <form onSubmit={(e) => onSubmit(e)}>  
             <div className="form-control">
                 <label htmlFor="name">Name</label>
@@ -74,8 +72,11 @@ export default function Form({ setFormSubmitted }: any) {
                 <br />
                 <textarea id="comments" ref={comments} name="comments" /> 
             </div>
+            {error !== "" && 
+                <div className="form-error">{error}</div>
+            }
             <div className="form-control">
-                <button onClick={(e) => onSubmit(e)}>Respond</button>
+                <button onClick={(e) => onSubmit(e)}>Submit RSVP</button>
             </div>
         </form>
     </div>
