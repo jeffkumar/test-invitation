@@ -18,7 +18,8 @@ export default function App() {
         name: name.current.value, 
         email: email.current.value,
         guests: guests.current.value,
-        coming: coming.current.value
+        iscoming: !coming.current.checked ? 1 : 0, 
+        comments: ""
     }).then(
       (data) => {
         console.log(data); // JSON data parsed by `data.json()` call
