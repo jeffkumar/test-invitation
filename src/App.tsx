@@ -30,7 +30,7 @@ export default function App() {
         setError("Please enter a valid email"); 
         return;
     }
-    if (Number.isInteger(guests.current.value) !== true) {
+    if (Number.isInteger(parseInt(guests.current.value)) !== true) {
         setError("Please enter a valid number of guests"); 
         return;
     }    
@@ -38,7 +38,7 @@ export default function App() {
     postData('https://adayinthelife.app/test-connect.php', { 
         name: name.current.value, 
         email: email.current.value,
-        guests: guests.current.value,
+        guests: parseInt(guests.current.value),
         iscoming: !coming.current.checked ? 1 : 0, 
         comments: ""
     }).then(
