@@ -8,7 +8,7 @@ body {
 }
 
 main {
-  padding: 2rem 5rem; 
+  padding: 1rem 2.5rem; 
 }
 
 code {
@@ -20,7 +20,7 @@ body {
     --input-color: white;
     --input-active-color: rgb(219, 246, 255);
     --border-color: lightgray;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .form-control {
