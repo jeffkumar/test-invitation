@@ -55,6 +55,13 @@ input[type='radio'] {
     background-color: var(--input-color);
 }
 
+button {
+    width: 120px; 
+    height: 30px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
 input {
     border-top-style: hidden;
     border-right-style: hidden;
