@@ -28,6 +28,9 @@ body {
         font-size: 20px;
         max-width: fit-content;
     }  
+    .fullscreen {
+        display: none;
+    }
 }
 
 .form-control {
@@ -147,10 +150,11 @@ header, .row {
 }
 
 header .col {
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 .col {
+    padding: 6px;
     flex: 4;        /* distributes space on the line equally among items */
 }
 
