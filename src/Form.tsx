@@ -74,8 +74,7 @@ export default function Form() {
                 <label htmlFor="coming2" className="radio-label">Sadly decline</label>
             </div> 
             <div className="form-control note">
-                <label htmlFor="comments">Leave a note</label>
-                <br />
+                <label htmlFor="comments">Leave a note</label> 
                 <textarea id="comments" ref={comments} name="comments" /> 
             </div>
             {error !== "" && 
