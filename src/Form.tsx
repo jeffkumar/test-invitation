@@ -1,12 +1,13 @@
-import React,  { useEffect, useState, useRef }  from 'react';
+import React, { useState, useRef }  from 'react';
+import { useNavigate } from "react-router-dom"; 
 import { postData } from "./service/InviteService"; 
 import { validateEmail } from "./service/utils"; 
 
-export default function Form({ setFormSubmitted }: any) {
-
+export default function Form() {
+  const navigate = useNavigate(); 
   const name = useRef<HTMLInputElement>(null); 
   const email = useRef<HTMLInputElement>(null); 
-  const guests = useRef<HTMLInputElement>(null); 
+  const guests = useRef<HTMLSelectElement>(null); 
   const coming = useRef<HTMLInputElement>(null); 
   const comments = useRef<HTMLTextAreaElement>(null); 
   const [showThanks, setShowThanks] = useState(false); 
@@ -39,13 +40,12 @@ export default function Form({ setFormSubmitted }: any) {
         console.log(data); // JSON data parsed by `data.json()` call
       }
     ).finally(()=> {
-        setFormSubmitted(true); 
+       navigate("/thankyou"); 
     }); 
   }; 
 
   return (
-    <div>
-         
+    <div> 
         <form onSubmit={(e) => onSubmit(e)}>  
             <div className="form-control">
                 <label htmlFor="name">Name</label>
@@ -56,18 +56,24 @@ export default function Form({ setFormSubmitted }: any) {
                 <input ref={email} id="email" type="email"  placeholder="your email" />
             </div>
             <div className="form-control">
-                <label htmlFor="guests">Number of guests coming</label>
-                <input ref={guests} id="guests" name="guests" style={{ width: '32px' }} placeholder=""  />
+                <label htmlFor="guests">Number of guests</label>
+                <select ref={guests} id="guests" name="guests" style={{ width: '46px' }} placeholder="" >
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select> 
             </div>
             <div className="form-control">
+                <label>Response</label>
+            </div>
+            <div className="form-control radio">
                 <input ref={coming} id="coming" type="radio" name="test" value="true" defaultChecked/>
                 <label htmlFor="coming" className="radio-label">Joyfully accept</label>
-            </div>
-            <div className="form-control">
                 <input ref={coming} id="coming2" type="radio" name="test" value="false"/>
                 <label htmlFor="coming2" className="radio-label">Sadly decline</label>
-            </div>
-            <div className="form-control">
+            </div> 
+            <div className="form-control note">
                 <label htmlFor="comments">Leave a note</label>
                 <br />
                 <textarea id="comments" ref={comments} name="comments" /> 
