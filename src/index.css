@@ -136,3 +136,24 @@ button:hover {
     font-weight: bold;
     color: red;
 } 
+
+/** 
+    For Guest List
+*/
+header, .row {
+    display: flex;  /* aligns all child elements (flex items) in a row */ 
+    justify-content: space-between;
+    padding-bottom: 20px;  
+}
+
+header .col {
+    font-weight: bold;
+}
+
+.col {
+    flex: 4;        /* distributes space on the line equally among items */
+}
+
+.col.half {
+    flex: 2
+}
