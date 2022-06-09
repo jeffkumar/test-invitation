@@ -8,7 +8,7 @@
     background-color: lightblue;
     border-radius: 50%;
     position: relative; 
-    font-size: .8rem;
+    font-size: .7rem;
     color: yellow;
 }
 
@@ -25,7 +25,7 @@
     left: 50%;
     height: 3px;
     width: 40%;
-    text-align: right;
+    text-align: center;
     transform-origin: left;  
     border-radius: 50%; 
     color: green;
@@ -38,7 +38,7 @@
     left: 50%;
     height: 2px;
     width: 40%;
-    text-align: right;
+    text-align: center;
     transform-origin: left;  
     border-radius: 50%;
     color: gray;
@@ -51,6 +51,7 @@
     left: 50%;
     height: 1px;
     width: 40%;
+    text-align: center;
     transform-origin: left;  
     border-radius: 50%; 
 }

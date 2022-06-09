@@ -1,6 +1,7 @@
  
 
 import React, { useState, useRef, useEffect }  from 'react';  
+import { text } from 'stream/consumers';
 import "./Clock.css";
 
 const hours = [
@@ -26,21 +27,27 @@ export function Clocks() {
     const [hoursHand, setHoursHand] = useState<number>(); 
     const [minutesHand, setMinutesHand] = useState<number>(); 
     const [timezonne, setTimezone] = useState<string>(); 
+    const [secondHandText, setSecondHandText ] = useState<string>("Be There"); 
+  
 
     useEffect(() => {
-        setTimeout(() => {
-            let date = new Date(); 
-            
+        const time = setTimeout(() => {
+            let date = new Date();  
             let seconds = date.getSeconds();
             const miliseconds = date.getMilliseconds();
             seconds = seconds + miliseconds / 1000;
             const minutes = date.getMinutes() + seconds / 60; 
-            const hours = date.getHours() + minutes / 60;
-             
+            const hours = date.getHours() + minutes / 60; 
             setSecondsHand((seconds  * (360/60) % 360) - 90);   
-            setHoursHand((hours  * (360/24) % 360) - 90);   
-            setMinutesHand((minutes * (360/60) % 360) - 90)
-        }, 100);
+            setHoursHand((hours % 12 * (360/12) % 360) - 90);   
+            setMinutesHand((minutes * (360/60) % 360) - 90);  
+            if ( seconds > 0 && seconds < 30 ) {
+                setSecondHandText("White tie");
+            }  else  {
+                setSecondHandText("Join Us");
+            }
+        }, 100);  
+        return () => clearTimeout(time);
     }); 
     
   return (
@@ -52,9 +59,9 @@ export function Clocks() {
             })}
         </div> 
         <div className="hands">
-            <div className="hour" style={{transform: `rotate(${hoursHand}deg)` }}>Anastasia</div>
-            <div className="minute" style={{transform: `rotate(${minutesHand}deg)` }}>Jeff</div>
-            <div className="second" style={{transform: `rotate(${secondsHand}deg)` }}>Be There</div>
+            <div className="hour" style={{transform: `rotate(${hoursHand}deg)` }}>Jeff</div>
+            <div className="minute" style={{transform: `rotate(${minutesHand}deg)` }}>Anastasiia</div>
+            <div className="second" style={{transform: `rotate(${secondsHand}deg)` }}>{secondHandText}</div>
         </div>
     </div>
   );
