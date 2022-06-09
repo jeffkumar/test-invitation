@@ -6,11 +6,10 @@ export default function Intro() {
         <main>
             <h1>RSVP</h1>  
             <div className="intro-section">
-                <div style={{maxWidth: "50%"}}>
+                <div style={{maxWidth: "60%"}}>
                     <p>
                         Jeff and Anastasiia would like to invite you to join us in Jelenia
-                        Gora, Poland on July 25, 2022. If you are wondering about wedding day details. 
-                        Don't worry, we have you covered. We'll be making updates here to keep you in the loop about the day as it draws near.
+                        Gora, Poland on July 25, 2022.  
                     </p>  
                 </div> 
                 <Clocks />  

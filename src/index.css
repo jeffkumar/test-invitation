@@ -82,13 +82,13 @@ input {
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
-    border-bottom-style: dashed;
+    border-bottom-style: dashed;  
 }
 
 input,
 select,
 option {
-    background-color: var(--input-color);
+    background-color: var(--input-color); 
 }
 
 input:focus {
@@ -141,7 +141,7 @@ button:hover {
 } 
 
 .footnote {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 /** 
