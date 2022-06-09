@@ -6,10 +6,10 @@ export default function Intro() {
         <main>
             <h1>RSVP</h1>  
             <div className="intro-section">
-                <div>
+                <div style={{maxWidth: "50%"}}>
                     <p>
                         Jeff and Anastasiia would like to invite you to join us in Jelenia
-                        Gora, Poland on July 24, 2022.
+                        Gora, Poland on July 25, 2022.
                     </p>  
                 </div> 
                 <Clocks /> 
