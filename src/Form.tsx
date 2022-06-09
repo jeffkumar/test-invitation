@@ -80,6 +80,7 @@ export default function Form() {
             {error !== "" && 
                 <div className="form-error">{error}</div>
             }
+            <div className="footnote">* Venue location disclosed on submission</div> 
             <div className="form-control">
                 <button onClick={(e) => onSubmit(e)}>Submit</button>
             </div>

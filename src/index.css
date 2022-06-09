@@ -140,6 +140,10 @@ button:hover {
     color: red;
 } 
 
+.footnote {
+    font-size: 8px;
+}
+
 /** 
     For Guest List
 */

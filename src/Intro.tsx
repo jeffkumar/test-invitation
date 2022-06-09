@@ -9,12 +9,13 @@ export default function Intro() {
                 <div style={{maxWidth: "50%"}}>
                     <p>
                         Jeff and Anastasiia would like to invite you to join us in Jelenia
-                        Gora, Poland on July 25, 2022.
+                        Gora, Poland on July 25, 2022. If you are wondering about wedding day details. 
+                        Don't worry, we have you covered. We'll be making updates here to keep you in the loop about the day as it draws near.
                     </p>  
                 </div> 
-                <Clocks /> 
-            </div> 
-            <Form /> 
-        </main> 
+                <Clocks />  
+            </div>  
+            <Form />  
+        </main>     
     );
 };
