@@ -161,3 +161,9 @@ header .col {
 .col.half {
     flex: 2
 }
+
+/** For intro page */
+.intro-section {
+    display: flex;
+    flex-direction: row;
+}
