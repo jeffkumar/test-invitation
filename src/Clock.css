@@ -8,7 +8,7 @@
     background-color: lightblue;
     border-radius: 50%;
     position: relative; 
-    font-size: .7rem;
+    font-size: .6rem;
     color: yellow;
 }
 
@@ -16,6 +16,16 @@
     top: 50%;
     left: 50%;
     position: absolute;
+}
+
+.center {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
 }
  
  
@@ -28,8 +38,8 @@
     text-align: center;
     transform-origin: left;  
     border-radius: 50%; 
-    color: green;
-    font-weight: bold;
+    color: yellow;
+    font-weight: 500;
 }
 
 .minute {
@@ -41,33 +51,35 @@
     text-align: center;
     transform-origin: left;  
     border-radius: 50%;
-    color: gray;
+    color: yellow;
+    font-weight: 400;
 }
 
 .second {
-    position: absolute; 
-    background-color: lightblue;
+    position: absolute;  
     top: 50%;
     left: 50%;
     height: 1px;
     width: 40%;
     text-align: center;
     transform-origin: left;  
+    color: green;
     border-radius: 50%; 
+    font-weight: 200;
 }
 
 .three {
     position: absolute; 
-    bottom: 50%; 
+    top: 50%; 
     left: 100%;
-    transform: translateX(-10px);
+    transform: translate(-10px, -5px);
 }
 
 .nine {
     position: absolute; 
-    bottom: 50%; 
+    top: 50%; 
     left: 0;
-    transform: translateX(5px);
+    transform: translate(5px, -5px);
 }
 
 .six {

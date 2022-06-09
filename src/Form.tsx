@@ -81,7 +81,7 @@ export default function Form() {
                 <div className="form-error">{error}</div>
             }
             <div className="form-control">
-                <button onClick={(e) => onSubmit(e)}>Submit RSVP</button>
+                <button onClick={(e) => onSubmit(e)}>Submit</button>
             </div>
         </form>
     </div>

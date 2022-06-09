@@ -27,7 +27,7 @@ export function Clocks() {
     const [hoursHand, setHoursHand] = useState<number>(); 
     const [minutesHand, setMinutesHand] = useState<number>(); 
     const [timezonne, setTimezone] = useState<string>(); 
-    const [secondHandText, setSecondHandText ] = useState<string>("Be There"); 
+    const [handsText, setHandsText ] = useState<string>("Join Us"); 
   
 
     useEffect(() => {
@@ -41,11 +41,7 @@ export function Clocks() {
             setSecondsHand((seconds  * (360/60) % 360) - 90);   
             setHoursHand((hours % 12 * (360/12) % 360) - 90);   
             setMinutesHand((minutes * (360/60) % 360) - 90);  
-            if ( seconds > 0 && seconds < 30 ) {
-                setSecondHandText("White tie");
-            }  else  {
-                setSecondHandText("Join Us");
-            }
+            
         }, 100);  
         return () => clearTimeout(time);
     }); 
@@ -58,10 +54,11 @@ export function Clocks() {
                 return <div className={name}>{hour}</div>
             })}
         </div> 
+        <div className="center"></div>
         <div className="hands">
             <div className="hour" style={{transform: `rotate(${hoursHand}deg)` }}>Jeff</div>
-            <div className="minute" style={{transform: `rotate(${minutesHand}deg)` }}>Anastasiia</div>
-            <div className="second" style={{transform: `rotate(${secondsHand}deg)` }}>{secondHandText}</div>
+            <div className="minute" style={{transform: `rotate(${minutesHand}deg)` }}>{handsText}</div>
+            <div className="second" style={{transform: `rotate(${secondsHand}deg)` }}>Anastasiia</div>
         </div>
     </div>
   );
