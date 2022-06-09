@@ -1,57 +1,7 @@
  
 
 import React, { useState, useEffect }  from 'react'; 
-
-const set = [
-    {
-    id: "110",
-    name: "Sunita Holloway",
-    email: "sunihollow@gmail.com",
-    guests: "2",
-    iscoming: "1",
-    comments: ""
-    },
-    {
-    id: "113",
-    name: "Jus",
-    email: "juskumar@gmail.com",
-    guests: "2",
-    iscoming: "1",
-    comments: "Not sure if 1 or 2 people"
-    },
-    {
-    id: "116",
-    name: "Jonathan Holloway",
-    email: "jdholloway@outlook.com",
-    guests: "2",
-    iscoming: "1",
-    comments: "The formated text boxes are a nice touch. It looks pretty good on mobile too"
-    },
-    {
-    id: "127",
-    name: "Jeff",
-    email: "jeffkumar.aw@gmail.com",
-    guests: "2",
-    iscoming: "1",
-    comments: ""
-    },
-    {
-    id: "128",
-    name: "Anastasiia Soroka",
-    email: "pro100sontse@gmail.com",
-    guests: "1",
-    iscoming: "1",
-    comments: "❤"
-    },
-    {
-    id: "130",
-    name: "Jasbir Kumar",
-    email: "jasbir.kumar@gmail.com",
-    guests: "2",
-    iscoming: "1",
-    comments: "Looking forward to a great day !!!!"
-    }
-    ];
+ 
 
  
 export default function GuestList() {
@@ -65,8 +15,7 @@ export default function GuestList() {
                 setList(data); 
                 console.log(data); 
             }
-        );
-        setList(set);
+        ); 
     })
     
 
