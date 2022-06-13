@@ -16,7 +16,7 @@ export default function GuestList() {
                 console.log(data); 
             }
         ); 
-    })
+    }, [])
     
 
   return (
@@ -36,7 +36,7 @@ export default function GuestList() {
                         <div className="col">{item.name}</div>
                         <div className="col fullscreen">{item.email}</div>
                         <div className="col half">{item.guests}</div>
-                        <div className="col half">{item.iscoming ? "yes" : "no"}</div>
+                        <div className="col half">{parseInt(item.iscoming) === 1 ? "yes" : "no"}</div>
                         <div className="col fullscreen">{item.comments}</div>
                     </div>
                 );
